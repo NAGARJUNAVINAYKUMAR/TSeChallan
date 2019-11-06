@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_lyt_pend_challans"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/recycler_view_margin"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/activity_padding">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_pend_challan_s_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:text=""
+        android:textColor="@color/colorTextView"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/et_margin_left"
+        android:layout_marginLeft="@dimen/et_margin_left"
+        android:layout_marginEnd="@dimen/et_margin_right"
+        android:layout_marginRight="@dimen/et_margin_right"
+        android:layout_toStartOf="@id/img_pend_challan_info"
+        android:layout_toLeftOf="@id/img_pend_challan_info"
+        android:layout_toEndOf="@id/tv_pend_challan_s_no"
+        android:layout_toRightOf="@id/tv_pend_challan_s_no"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_pend_challan_eticket_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_eticket_no"
+            android:textColor="@color/colorTextView"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_pend_challan_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_margin_top"
+            android:text="@string/dummy_amount"
+            android:textColor="@color/colorTextView" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/img_pend_challan_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_info_black_24" />
+
+</RelativeLayout>

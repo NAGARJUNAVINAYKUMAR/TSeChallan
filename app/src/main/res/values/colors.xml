@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4D61A6</color>
+    <color name="colorPrimaryLight">#FF8695C6</color>
+    <color name="colorPrimaryDark">#FF435697</color>
+    <color name="colorAccent">#FF435697</color>
+    <color name="colorPrimaryTooLight">#CCD7FF</color>
+    <color name="colorBG">#F4F4F4</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorSearchHighlight">#E91E63</color>
+    <color name="colorTextView">#343F76</color>
+    <color name="colorHomeModuleBG">#EDEBEB</color>
+    <color name="colorRedFromLogo">#E62F29</color>
+    <color name="colorBrown">#B40404</color>
+    <color name="colorLayoutBorder">#fc757584</color>
+    <color name="colorHint">#fc5c5b5b</color>
+    <color name="colorToggleStart">#4b4b4b</color>
+    <color name="colorToggleCentre">#868586</color>
+    <color name="colorToggleEnd">#cccbcb</color>
+
+</resources>

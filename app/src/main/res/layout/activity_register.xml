@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBG"
+    tools:context=".activities.RegisterActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_app" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_user_registration"
+                style="@style/large_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="@string/user_registration" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textColor="@color/colorTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/first_name" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_first_name"
+                        style="@style/edit_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_margin_top"
+                        android:hint="@string/first_name"
+                        android:inputType="text"
+                        android:maxLength="25" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textColor="@color/colorTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/last_name" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_last_name"
+                        style="@style/edit_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_margin_top"
+                        android:hint="@string/last_name"
+                        android:inputType="text"
+                        android:maxLength="25" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:textColor="@color/colorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:text="@string/email_id" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_email_id"
+                style="@style/edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_margin_top"
+                android:inputType="textEmailAddress"
+                android:hint="@string/enter_email_id" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:textColor="@color/colorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:text="@string/contact_no" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_contact_no"
+                style="@style/edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_margin_top"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:hint="@string/enter_contact_no" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:textColor="@color/colorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:text="@string/employee_id" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_emp_id"
+                style="@style/edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_margin_top"
+                android:inputType="number"
+                android:hint="@string/enter_employee_id" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:textColor="@color/colorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:text="@string/employee_pao_no" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_emp_pao_no"
+                style="@style/edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_margin_top"
+                android:inputType="number"
+                android:maxLength="7"
+                android:hint="@string/enter_pao_no" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:textColor="@color/colorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:text="@string/district_unit" />
+
+            <com.tspolice.echallan.searchablespinner.SearchableSpinner
+                android:id="@+id/spinner_unit_name"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintText="@string/select_unit_name"
+                android:layout_marginTop="@dimen/tv_margin_top" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:textColor="@color/colorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:text="@string/ps_name" />
+
+            <com.tspolice.echallan.searchablespinner.SearchableSpinner
+                android:id="@+id/spinner_ps_name"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintText="@string/select_ps_name"
+                android:layout_marginTop="@dimen/tv_margin_top"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:textColor="@color/colorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:text="@string/officer_rank" />
+
+            <com.tspolice.echallan.searchablespinner.SearchableSpinner
+                android:id="@+id/spinner_cadre_name"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintText="@string/select_cadre_name"
+                android:layout_marginTop="@dimen/tv_margin_top"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/submit_img_margin_top"
+                android:background="@drawable/ic_next" />
+
+            <LinearLayout
+                android:id="@+id/ll_new_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:layout_marginBottom="@dimen/submit_img_margin_bottom"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_already_have_an_account"
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_have_an_account"
+                    android:textStyle="italic"/>
+
+                <View
+                    android:layout_width="@dimen/empty_view_width"
+                    android:layout_height="match_parent"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_login_here"
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

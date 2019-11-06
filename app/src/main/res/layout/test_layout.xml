@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ts_eticket_login"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ts_eticket_login"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ts_eticket_login"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ts_eticket_login"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ts_eticket_login"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ts_eticket_login"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ts_eticket_login" />
+
+    <com.tspolice.echallan.otpview.OtpView
+        android:id="@+id/otpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:itemBackground="@color/colorPrimaryTooLight"
+        android:textColor="@android:color/black"
+        app:hideLineWhenFilled="true"
+        app:itemCount="4"
+        android:layout_gravity="center"
+        app:itemSpacing="6dp"
+        app:lineColor="@color/colorPrimaryTooLight"
+        app:state_filled="true"
+        app:viewType="line" />
+
+</LinearLayout>

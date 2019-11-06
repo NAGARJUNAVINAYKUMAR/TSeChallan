@@ -1,0 +1,56 @@
+{
+  "respCode": 1,
+  "respDesc": "Success",
+  "respRemark": [
+    {
+      "stateCode": 1,
+      "unit_name": "Cyberabad",
+      "unit_sf": "CYB",
+      "helpLine_No": 123456789101,
+      "unit_cd": 22,
+      "tti_Addr": null,
+      "cmdbooth_Addr": null,
+      "cmdbooth_No": 123456789101
+    },
+    {
+      "stateCode": 1,
+      "unit_name": "Hyderabad",
+      "unit_sf": "HYD",
+      "helpLine_No": null,
+      "unit_cd": 23,
+      "tti_Addr": null,
+      "cmdbooth_Addr": null,
+      "cmdbooth_No": null
+    },
+    {
+      "stateCode": 1,
+      "unit_name": "Rachakonda",
+      "unit_sf": "RAC",
+      "helpLine_No": null,
+      "unit_cd": 24,
+      "tti_Addr": null,
+      "cmdbooth_Addr": null,
+      "cmdbooth_No": null
+    },
+    {
+      "stateCode": 1,
+      "unit_name": "Warangal",
+      "unit_sf": "WGL",
+      "helpLine_No": null,
+      "unit_cd": 44,
+      "tti_Addr": null,
+      "cmdbooth_Addr": null,
+      "cmdbooth_No": null
+    },
+    {
+      "stateCode": 1,
+      "unit_name": "Siddipet",
+      "unit_sf": "SDP",
+      "helpLine_No": null,
+      "unit_cd": 69,
+      "tti_Addr": null,
+      "cmdbooth_Addr": null,
+      "cmdbooth_No": null
+    }
+  ]
+}

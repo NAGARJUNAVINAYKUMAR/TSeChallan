@@ -1,0 +1,95 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppOTPTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+    </style>
+
+    <style name="AppThemeActionMode" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionModeBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="MultiSelectDialogTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="large_text_style">
+        <item name="android:textColor">@color/colorTextView</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Large</item>
+        <item name="android:padding">@dimen/large_text_padding</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="edit_text_style">
+        <item name="android:background">@drawable/edit_text_style</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">start</item>
+        <item name="android:padding">@dimen/et_padding</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/spinner_style</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:gravity">start</item>
+        <item name="android:padding">@dimen/et_padding</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:background">@drawable/button_style</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Button</item>
+        <item name="android:padding">@dimen/et_padding</item>
+    </style>
+
+    <style name="toggle_button_style">
+        <item name="android:background">@drawable/toggle_btn_style_checked</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/toggle_btn_padding</item>
+        <item name="android:paddingStart">@dimen/toggle_btn_padding</item>
+        <item name="android:paddingRight">@dimen/toggle_btn_padding</item>
+        <item name="android:paddingEnd">@dimen/toggle_btn_padding</item>
+    </style>
+
+    <style name="radio_button_style">
+        <item name="android:textColor">@color/colorTextView</item>
+        <item name="android:textSize">@dimen/radio_btn_text_size</item>
+    </style>
+
+    <style name="lyt_heading_text_style">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/large_text_padding</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="OtpWidget" />
+
+    <style name="OtpWidget.OtpView" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+</resources>

@@ -1,0 +1,31 @@
+{
+  "respCode": 1,
+  "respDesc": "Success",
+  "respRemark": [
+    {
+      "wheelercd": "NA",
+      "vclass_id": "2",
+      "veh_class": "2-Wheeler"
+    },
+    {
+      "wheelercd": "NA",
+      "vclass_id": "3",
+      "veh_class": "3-Wheeler"
+    },
+    {
+      "wheelercd": "NA",
+      "vclass_id": "4",
+      "veh_class": "4-Wheeler"
+    },
+    {
+      "wheelercd": "NA",
+      "vclass_id": "6",
+      "veh_class": "6-Wheeler"
+    },
+    {
+      "wheelercd": "NA",
+      "vclass_id": "T",
+      "veh_class": "T-Truck"
+    }
+  ]
+}

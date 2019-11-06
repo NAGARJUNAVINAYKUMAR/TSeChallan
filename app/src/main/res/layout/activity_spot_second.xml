@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context=".activities.SpotSecondActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar_spot"
+            layout="@layout/toolbar_app" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_spot_second_screen"
+                style="@style/large_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="@string/spot_challan" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/is_it_spot_payment" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/rg_house_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        tools:ignore="UselessParent">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:checked="true"
+                            android:text="@string/yes" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detained_items" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/et_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/toggle_btn_vehicle"
+                        style="@style/toggle_button_style"
+                        android:layout_width="@dimen/btn_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toggle_btn_style_unchecked"
+                        android:drawableStart="@drawable/ic_vehicle_detain_black"
+                        android:drawableLeft="@drawable/ic_vehicle_detain_black"
+                        android:textColor="@color/colorToggleCentre"
+                        android:textOff="@string/vehicle"
+                        android:textOn="@string/vehicle" />
+
+                    <View
+                        android:layout_width="@dimen/empty_view_width"
+                        android:layout_height="match_parent" />
+
+                    <ToggleButton
+                        android:id="@+id/toggle_btn_rc"
+                        style="@style/toggle_button_style"
+                        android:layout_width="@dimen/btn_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toggle_btn_style_unchecked"
+                        android:drawableStart="@drawable/ic_dl_detain_black"
+                        android:drawableLeft="@drawable/ic_dl_detain_black"
+                        android:textColor="@color/colorToggleCentre"
+                        android:textOff="@string/rc"
+                        android:textOn="@string/rc" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/et_margin_top"
+                    android:layout_marginBottom="@dimen/tv_margin_bottom"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/toggle_btn_licence"
+                        style="@style/toggle_button_style"
+                        android:layout_width="@dimen/btn_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toggle_btn_style_unchecked"
+                        android:drawableStart="@drawable/ic_dl_detain_black"
+                        android:drawableLeft="@drawable/ic_dl_detain_black"
+                        android:textColor="@color/colorToggleCentre"
+                        android:textOff="@string/licence"
+                        android:textOn="@string/licence" />
+
+                    <View
+                        android:layout_width="@dimen/empty_view_width"
+                        android:layout_height="match_parent" />
+
+                    <ToggleButton
+                        android:id="@+id/toggle_btn_permit"
+                        style="@style/toggle_button_style"
+                        android:layout_width="@dimen/btn_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toggle_btn_style_unchecked"
+                        android:drawableStart="@drawable/ic_permit_detain_black"
+                        android:drawableLeft="@drawable/ic_permit_detain_black"
+                        android:textColor="@color/colorToggleCentre"
+                        android:textOff="@string/permit"
+                        android:textOn="@string/permit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/et_margin_top"
+                    android:layout_marginBottom="@dimen/et_margin_bottom"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/toggle_btn_none"
+                        style="@style/toggle_button_style"
+                        android:layout_width="@dimen/btn_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toggle_btn_style_unchecked"
+                        android:drawableStart="@drawable/ic_none_detain_black"
+                        android:drawableLeft="@drawable/ic_none_detain_black"
+                        android:textColor="@color/colorToggleCentre"
+                        android:textOff="@string/none"
+                        android:textOn="@string/none" />
+
+                    <View
+                        android:layout_width="@dimen/empty_view_width"
+                        android:layout_height="match_parent" />
+
+                    <ToggleButton
+                        android:id="@+id/toggle_btn_invisible"
+                        style="@style/toggle_button_style"
+                        android:layout_width="@dimen/btn_width"
+                        android:layout_height="wrap_content"
+                        android:textOff="@string/rc"
+                        android:textOn="@string/rc"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:textColor="@color/colorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:text="@string/mobile_number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_margin_top"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatEditText
+                    style="@style/edit_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/tv_margin_right"
+                    android:layout_marginRight="@dimen/tv_margin_right"
+                    android:layout_weight="0.3"
+                    android:hint="@string/mobile_number"
+                    android:inputType="phone"
+                    android:maxLength="10" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_send_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tv_margin_left"
+                    android:layout_marginLeft="@dimen/tv_margin_left"
+                    android:layout_weight="0.7"
+                    android:text="@string/send_otp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnr_lyt_btns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_margin_top"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_back"
+                    style="@style/button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.49"
+                    android:text="@string/back" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.02" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_submit"
+                    style="@style/button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.49"
+                    android:text="@string/submit" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/colorWhite" />
+            <padding
+                android:bottom="0dp"
+                android:left="@dimen/spinner_padding"
+                android:right="@dimen/spinner_padding"
+                android:top="0dp" />
+            <stroke
+                android:width="0.05dp"
+                android:color="@color/colorToggleEnd" />
+            <corners android:radius="@dimen/et_corners" />
+            <gradient
+                android:angle="360"
+                android:centerColor="@color/colorWhite"
+                android:endColor="@color/colorWhite"
+                android:startColor="@color/colorWhite"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <item>
+        <bitmap
+            android:gravity="end"
+            android:src="@drawable/baseline_arrow_drop_down_black_18"
+            android:tint="@color/colorToggleCentre" />
+    </item>
+</layer-list>

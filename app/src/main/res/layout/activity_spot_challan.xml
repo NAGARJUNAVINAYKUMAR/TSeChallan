@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context=".activities.SpotChallanActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar_spot"
+            layout="@layout/toolbar_app" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_challan_type_header"
+                style="@style/large_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="@string/spot_challan" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/spinner_ps_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_down_arrow"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:text="@string/select_ps_name" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/spinner_point_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_down_arrow"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:layout_marginTop="@dimen/tv_margin_top"
+                android:visibility="visible"
+                android:text="@string/select_point_name" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/spinner_resp_ps_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_down_arrow"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:layout_marginTop="@dimen/tv_margin_top"
+                android:text="@string/select_resp_ps_name" />
+
+            <RadioGroup
+                android:id="@+id/rg_challan_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/rb_regn_no"
+                    style="@style/radio_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/regd_no" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/rb_tr_no"
+                    style="@style/radio_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:text="@string/t_r_no" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/rb_engine_no"
+                    style="@style/radio_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/engine_no" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/rb_chassis_no"
+                    style="@style/radio_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.2"
+                    android:text="@string/chassis_no" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_vehicle_no_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/vehicle_no"
+                    android:textColor="@color/colorTextView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_star_vehicle_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center"
+                    android:text="@string/star"
+                    android:textColor="@color/colorRed" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_regn_no"
+                    style="@style/edit_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="@string/enter_vehicle_no"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/driving_licence_no"
+                    android:textColor="@color/colorTextView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@color/colorTextView" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_dl_no"
+                    style="@style/edit_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="@string/enter_licence_no"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="20" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/date_of_birth"
+                    android:textColor="@color/colorTextView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@color/colorTextView" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_dl_dob"
+                    style="@style/edit_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="@string/dd_mmm_yyyy"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="11" />
+
+                <!--<android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_dl_dob"
+                    style="@style/edit_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="@string/dd_mmm_yyyy" />-->
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/img_dob_select"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_calender" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_get_rta_details"
+                style="@style/button_style"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/btn_margin_top"
+                android:text="@string/get_details" />
+
+            <!--RC Details start-->
+            <LinearLayout
+                android:id="@+id/lnr_lyt_rc_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_margin_top"
+                android:background="@drawable/info_layout_style_white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/lyt_heading_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vehicle_rta_details" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        tools:ignore="UselessParent">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_regd_number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.35"
+                            android:text="@string/regd_number"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_rc_regd_number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.55"
+                            android:text="@string/empty_value"
+                            android:textColor="@color/colorTextView"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_margin_top"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.35"
+                            android:text="@string/regd_owner"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_rc_owner_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.55"
+                            android:text="@string/empty_value" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_margin_top"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.35"
+                            android:text="@string/address"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_rc_owner_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.55"
+                            android:text="@string/empty_value" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_margin_top"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.35"
+                            android:text="@string/vehicle_type"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_rc_vehicle_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.55"
+                            android:text="@string/empty_value" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_margin_top"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.35"
+                            android:text="@string/chassis_no"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_rc_chassis_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.55"
+                            android:text="@string/empty_value" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_margin_top"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.35"
+                            android:text="@string/engine_no"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_rc_engine_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.55"
+                            android:text="@string/empty_value" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_margin_top"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.35"
+                            android:text="@string/insurance_validity"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_rc_insurance_validity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.55"
+                            android:text="@string/empty_value" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_rc_details_not_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_margin_top"
+                android:gravity="center"
+                android:text="@string/vehicle_details_not_found"
+                android:textColor="@color/colorRed"
+                android:visibility="gone" />
+            <!--RC Details end-->
+
+            <!--DL Details start-->
+            <LinearLayout
+                android:id="@+id/lnr_lyt_dl_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:background="@drawable/info_layout_style_white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/lyt_heading_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/driver_s_licence_details" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/activity_padding"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_dl_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty_value"
+                            android:textColor="@color/colorTextView"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_dl_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_margin_top"
+                            android:text="@string/empty_value" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_dl_father_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_margin_top"
+                            android:text="@string/empty_value" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_dl_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_margin_top"
+                            android:text="@string/empty_value" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_dl_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_margin_top"
+                            android:text="@string/age" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_dl_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_margin_top"
+                            android:text="@string/gender" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_dl_issued_on"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_margin_top"
+                            android:text="@string/issued_on" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_dl_penalty_points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_margin_top"
+                            android:text="@string/empty_value"
+                            android:textColor="@color/colorTextView"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/img_dl_img"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dl_img_height"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_profile_img" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_dl_details_not_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:gravity="center"
+                android:text="@string/licence_details_not_found"
+                android:textColor="@color/colorRed"
+                android:visibility="gone" />
+            <!--DL Details end-->
+
+            <!--Driver information start-->
+            <LinearLayout
+                android:id="@+id/lnr_lyt_driver_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textColor="@color/colorTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:text="@string/driver_s_name" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_star_driver"
+                        android:textColor="@color/colorRed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:gravity="center"
+                        android:text="@string/star" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_driver_name"
+                        style="@style/edit_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="@string/enter_driver_name"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="50" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/et_margin_top"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textColor="@color/colorTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:text="@string/driver_s_father_name" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textColor="@color/colorTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:gravity="center"
+                        android:text="@string/colon" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_driver_father_name"
+                        style="@style/edit_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="@string/enter_driver_father_name"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="50"
+                        tools:ignore="TooManyViews" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/et_margin_top"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textColor="@color/colorTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:text="@string/address" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textColor="@color/colorTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:gravity="center"
+                        android:text="@string/colon" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_driver_address"
+                        style="@style/edit_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.6"
+                        android:hint="@string/dummy_address"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="4" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/et_margin_top"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textColor="@color/colorTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:text="@string/age" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textColor="@color/colorTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:gravity="center"
+                        android:text="@string/colon" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_driver_age"
+                        style="@style/edit_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="@string/enter_driver_age"
+                        android:inputType="number"
+                        android:maxLength="2" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--Driver information end-->
+
+            <!--Pending challans Details start-->
+            <LinearLayout
+                android:id="@+id/lnr_lyt_pending_challans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:background="@drawable/info_layout_style_white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_pending_challans"
+                    style="@style/lyt_heading_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pending_challans_and_amount" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:textColor="@color/colorTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:text="@string/pending_challans" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:textColor="@color/colorTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            tools:ignore="TooManyViews" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_no_of_pending_challans"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:text=""
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_margin_top"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:textColor="@color/colorTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:text="@string/pending_amount"
+                            tools:ignore="TooManyViews" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:textColor="@color/colorTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            tools:ignore="TooManyViews" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_total_pending_amount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:text=""
+                            android:textStyle="bold"
+                            tools:ignore="TooManyViews" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_pending_challans_not_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:gravity="center"
+                android:text="@string/no_pending_challans"
+                android:textColor="@color/colorRed"
+                android:visibility="gone" />
+            <!--Pending challans Details end-->
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/spinner_wheeler_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:visibility="visible"
+                android:text="@string/select_wheeler_code" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/spinner_violations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_margin_top"
+                android:visibility="visible"
+                android:text="@string/select_violations" />
+
+            <!--selected violations to be display starts-->
+            <LinearLayout
+                android:id="@+id/lnr_lyt_selected_violations_card_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:background="@drawable/info_layout_style_white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_selected_violations_display"
+                    style="@style/lyt_heading_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selected_violations" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_padding">
+
+                    <LinearLayout
+                        android:id="@+id/lnr_lyt_selected_violations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lv_selected_violations"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_bottom_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:layout_marginTop="@dimen/et_margin_top"
+                        android:background="@color/colorToggleEnd" />
+
+                    <LinearLayout
+                        android:id="@+id/lnr_lyt_total_amount_display"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/et_margin_top"
+                        android:layout_marginLeft="@dimen/multi_dialog_margin"
+                        android:layout_marginStart="@dimen/multi_dialog_margin"
+                        android:layout_marginRight="@dimen/multi_dialog_margin"
+                        android:layout_marginEnd="@dimen/multi_dialog_margin"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        tools:ignore="UselessParent">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="@string/total_amount"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:textColor="@color/colorTextView" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_total_fine_amount_display"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:gravity="end"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextView"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:textColor="@color/colorTextView"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--selected violations to be display ends-->
+
+            <LinearLayout
+                android:id="@+id/lnr_lyt_bac_serial_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/bac_serial_no" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center"
+                    android:text="@string/colon" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_bac_serial_no"
+                    style="@style/edit_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="@string/enter_bac_serial_no"
+                    android:inputType="number"
+                    android:maxLength="10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnr_lyt_bac_reading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/bac_reading" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center"
+                    android:text="@string/colon" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_bac_reading"
+                    style="@style/edit_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="@string/enter_bac_reading"
+                    android:inputType="number"
+                    android:maxLength="3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnr_lyt_camera_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_margin_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/driver_image" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="center"
+                    android:text="@string/colon" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/img_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_camera" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/img_gallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_gallery" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_display"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/submit_img_margin_top"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_profile_img"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/lnr_lyt_btns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_margin_top"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_cancel"
+                    style="@style/button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.49"
+                    android:text="@string/cancel" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.02" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_next"
+                    style="@style/button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.49"
+                    android:text="@string/next" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

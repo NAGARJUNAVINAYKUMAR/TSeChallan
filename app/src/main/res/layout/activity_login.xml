@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context=".activities.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_lyt_login_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_banner_height"
+        android:background="@drawable/ic_login_banner">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_app_name"
+            style="@style/large_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_app_version"
+            android:padding="0dp"
+            android:text="@string/ts_eticket_login" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_app_version"
+            android:textColor="@color/colorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/app_version" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lnr_lyt_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_lyt_login_banner"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_pid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_user_name_24x24"
+                android:drawableLeft="@drawable/ic_user_name_24x24"
+                android:hint="@string/login_id"
+                android:inputType="number"
+                android:maxLength="10" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/et_margin_top">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_password_24x24"
+                android:drawableLeft="@drawable/ic_password_24x24"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLength="10" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tv_margin_left"
+            android:layout_marginLeft="@dimen/tv_margin_left"
+            android:layout_marginTop="@dimen/et_margin_top"
+            android:layout_marginEnd="@dimen/tv_margin_right"
+            android:layout_marginRight="@dimen/tv_margin_right">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_forgot_password"
+                android:textColor="@color/colorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="@string/forgot_password"
+                android:textStyle="italic" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_register"
+                android:textColor="@color/colorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/new_register"
+                android:textStyle="italic"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img_next_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/submit_img_margin_top"
+            android:layout_marginBottom="@dimen/submit_img_margin_bottom"
+            android:background="@drawable/ic_next" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_margin_left"
+            android:layout_marginLeft="@dimen/content_item_margin"
+            android:layout_marginStart="@dimen/content_item_margin"
+            android:layout_marginRight="@dimen/content_item_margin"
+            android:layout_marginEnd="@dimen/content_item_margin"
+            android:background="@color/colorToggleEnd" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_integrated_echallan_system"
+            android:textColor="@color/colorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/activity_padding"
+            android:textStyle="italic"
+            android:text="@string/designed_and_developed_by_winc" />
+
+    </LinearLayout>
+
+</RelativeLayout>

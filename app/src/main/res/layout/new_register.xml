@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context=".activities.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/content_padding">
+
+        <RelativeLayout
+            android:id="@+id/rel_lyt_db_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content_item_margin"
+            android:background="@drawable/db_first"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_app_name"
+                style="@style/large_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="@string/ts_eticket_login" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_app_version"
+                android:textColor="@color/colorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_app_name"
+                android:gravity="center"
+                android:text="@string/app_version" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:baselineAligned="false"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/content_item_margin"
+                android:layout_weight="1"
+                android:background="@drawable/ic_db_second"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_spot"
+                    android:layout_width="@dimen/submit_img_width"
+                    android:layout_height="@dimen/submit_img_width"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_spot" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/tv_padding"
+                    android:text="@string/spot_challan" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/content_item_margin"
+                android:layout_weight="1"
+                android:background="@drawable/ic_db_third"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_drunk_drive"
+                    android:layout_width="@dimen/submit_img_width"
+                    android:layout_height="@dimen/submit_img_width"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_drunk_drive" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/tv_padding"
+                    android:text="@string/drunk_drive" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/content_item_margin"
+                android:layout_weight="1"
+                android:background="@drawable/ic_db_fourth"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_crane"
+                    android:layout_width="@dimen/submit_img_width"
+                    android:layout_height="@dimen/submit_img_width"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_crane" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/tv_padding"
+                    android:text="@string/_41_cp_act" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="295dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/content_item_margin"
+                android:layout_weight="1"
+                android:background="@drawable/ic_db_fifth"
+                android:gravity="top"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/submit_img_width"
+                    android:layout_height="@dimen/submit_img_width"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_spot" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/tv_padding"
+                    android:text="@string/spot_challan" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/content_item_margin"
+                android:layout_weight="1"
+                android:background="@drawable/ic_db_third"
+                android:gravity="top"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/submit_img_width"
+                    android:layout_height="@dimen/submit_img_width"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_drunk_drive" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/tv_padding"
+                    android:text="@string/drunk_drive" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/content_item_margin"
+                android:layout_weight="1"
+                android:background="@drawable/ic_db_fourth"
+                android:gravity="top"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/submit_img_width"
+                    android:layout_height="@dimen/submit_img_width"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_crane" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@color/colorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/tv_padding"
+                    android:text="@string/_41_cp_act" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

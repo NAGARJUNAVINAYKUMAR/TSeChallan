@@ -1,0 +1,106 @@
+{
+  "respCode": 1,
+  "respDesc": "Success",
+  "respRemark": [
+    {
+      "cadre_cd": 0,
+      "cadre_sf": "DEVP",
+      "cadre_name": "Developer"
+    },
+    {
+      "cadre_cd": 1,
+      "cadre_sf": "DGP",
+      "cadre_name": "Directore General of Police"
+    },
+    {
+      "cadre_cd": 2,
+      "cadre_sf": "Add DGP",
+      "cadre_name": "Additional Director General of Police"
+    },
+    {
+      "cadre_cd": 3,
+      "cadre_sf": "IG",
+      "cadre_name": "Inspector General of Police"
+    },
+    {
+      "cadre_cd": 4,
+      "cadre_sf": "DIG",
+      "cadre_name": "Deputy Inspector General of Police"
+    },
+    {
+      "cadre_cd": 5,
+      "cadre_sf": "CP",
+      "cadre_name": "Commissioner of Police"
+    },
+    {
+      "cadre_cd": 6,
+      "cadre_sf": "Add CP",
+      "cadre_name": "Additional Commissioner of Police"
+    },
+    {
+      "cadre_cd": 7,
+      "cadre_sf": "DCP",
+      "cadre_name": "Deputy Commissioner of Police"
+    },
+    {
+      "cadre_cd": 8,
+      "cadre_sf": "ACP",
+      "cadre_name": "Assistant Commissioner of Police"
+    },
+    {
+      "cadre_cd": 9,
+      "cadre_sf": "SP",
+      "cadre_name": "Superintendent of Police"
+    },
+    {
+      "cadre_cd": 10,
+      "cadre_sf": "Add SP",
+      "cadre_name": "Additional Superintendent of Police"
+    },
+    {
+      "cadre_cd": 11,
+      "cadre_sf": "DSP",
+      "cadre_name": "Deputy Superintendent of Police"
+    },
+    {
+      "cadre_cd": 12,
+      "cadre_sf": "CI",
+      "cadre_name": "Circle Inspector"
+    },
+    {
+      "cadre_cd": 13,
+      "cadre_sf": "RI",
+      "cadre_name": "Reserved Inspector"
+    },
+    {
+      "cadre_cd": 14,
+      "cadre_sf": "SI",
+      "cadre_name": "Sub Inspector"
+    },
+    {
+      "cadre_cd": 15,
+      "cadre_sf": "RSI",
+      "cadre_name": "Reserved Sub Inspector"
+    },
+    {
+      "cadre_cd": 16,
+      "cadre_sf": "ASI",
+      "cadre_name": "Assistant Police Sub Inspector"
+    },
+    {
+      "cadre_cd": 17,
+      "cadre_sf": "HC",
+      "cadre_name": "Police Head Constable"
+    },
+    {
+      "cadre_cd": 18,
+      "cadre_sf": "PC",
+      "cadre_name": "Police Constable"
+    },
+    {
+      "cadre_cd": 19,
+      "cadre_sf": "HG",
+      "cadre_name": "Home Guard"
+    }
+  ]
+}

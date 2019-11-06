@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBG">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_dialog_forgot_pass"
+        style="@style/large_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chassis_no" />
+
+    <ImageView
+        android:id="@+id/img_otp_verification_close"
+        android:layout_width="@dimen/close_img_width"
+        android:layout_height="@dimen/close_img_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="false"
+        android:layout_margin="@dimen/close_img_margin"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_close_2x" />
+
+    <LinearLayout
+        android:id="@+id/lnr_lyt_otp_verification_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_forgot_pass"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/please_enter_last_five_digits_of_vehicle_chassis_no"
+            android:textColor="@color/colorTextView" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_last_five_chassis_no"
+            style="@style/edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/btn_margin_top"
+            android:layout_marginBottom="@dimen/et_margin_bottom"
+            android:inputType="textCapCharacters"
+            android:maxLength="5"
+            android:hint="@string/enter_chassis_no" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_chassis_no_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnr_lyt_otp_verification_content"
+        android:background="@color/colorAccent"
+        android:text="@string/submit"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+</RelativeLayout>
